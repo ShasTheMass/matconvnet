@@ -100,7 +100,7 @@ if isstr(opts.errorFunction)
       opts.errorFunction = @error_multiclass ;
       if isempty(opts.errorLabels), opts.errorLabels = {'top1e', 'top5e'} ; end
     case 'binary'
-      opts.errorFunction = @error_binary ;
+      opts.errorFunction = @error_binaryclass ;
       if isempty(opts.errorLabels), opts.errorLabels = {'bine'} ; end
     otherwise
       error('Uknown error function ''%s''', opts.errorFunction) ;
